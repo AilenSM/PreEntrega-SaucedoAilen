@@ -1,0 +1,238 @@
+/*ESTRUCTURA DE CSS*/
+/*SPV:
+    SELECTOR= ETIQUETA/CLASE/ID
+    PROPIEDAD= ATRIBUTO/CARACTERISTICA QUE DA ESTRUCTURA
+    VALOR= TAMAÑO O VALOR QUE ADQUIERE ESA PROPIEDAD*/
+
+
+/*///////////////
+ESTILOS RESET
+////////////////
+RESET CSS= ESTILOS RESETEADOS PARA TRABAJAR DESDE CERO, PARTIMOS DEL LLAMADO "*" = TODO EL DOC HTML*/
+*{
+    margin: 0; /*ESPACIO POR FUERA DE LA CAJA, DEL CONTORNO PARA AFUERA*/
+    padding: 0;/*RELLENO, ESPACIADO INTERNO*/
+    box-sizing: border-box;/*TAMAÑO DE CAJA O DOCUMENTO*/
+    font-family: 'Raleway', sans-serif;
+}
+
+/*TIPOGRAFIA Raleway DISPLAY PARA TODO EL DOC*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/*TIPOGRAFIA Nunito Sans DISPLAY PARA HEADER Y FOOTER*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+
+/*LLAMAMOS A LA LISTA PARA SACAR TODOS LOS ESTILOS QUE TIENE*/
+li{
+    list-style: none;
+}
+
+#main {
+    min-height: 100vh;
+}
+
+/*ETIQUETA DE LINK*/
+a{ 
+    font-style: none;
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+    color: darkolivegreen;
+}
+
+/*/////////////////
+ESTILO BODY
+////////////////////*/
+
+#body{
+    max-width: 1440px;
+    margin: o auto; /*CENTRADO DE CONTENIDO HORIZONTALMENTE*/
+}
+
+/*ORDEN DE PADRE A HIJO*/
+section article h1{
+    color: forestgreen;
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+}
+
+section article h2{
+    color:lightgreen;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+section article h3{
+    color:lightgreen;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*///////////////
+ESTILOS DEL NAVBAR/HEADER
+///////////////////*/
+
+#header {
+    margin: 0 auto;
+    padding: 5;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#nav {
+    background-color:lightgreen ;
+    width: 100%;
+    height: 100%;
+}
+
+#nav ul li {
+    display: inline-block;
+    margin: 20px;
+    padding: auto;
+}
+
+/*/////////////////
+ESTILO INDEX/MAIN
+////////////////////*/
+
+/*//////////////////////
+LAS ETIQUETAS EN LINEA NO NOS PERMITEN MODIFICAR SU ESTRUCTURA
+LAS ETIQUETAS EN BLOQUE NOS PERMITEN MODIFICAR SU ESTRUCTURA 
+//////////////////////*/
+
+#main{
+    min-height: 100vh; /*ALTO MINIMO= MAIN OCUPANDO SIEMPPRE EL 100% DEL VIEWPORT/VISTA DISPONIBLE EN PANTALLA*/
+}
+
+
+.mainTitulo{
+    color: darkolivegreen;
+    font-size: auto;
+    margin: 20px 20px;
+    padding: auto;
+}
+
+.mainSubtitulo1{
+    color: darkolivegreen;
+    display: inline-block;
+    font-size: auto;
+    margin: 20px;
+}
+
+.mainImagenImg{
+    width: 300px;
+    height: auto;
+}
+
+/*/////////////// 
+APRENDEMOS MODELO DE CAJA
+///////////////////*/
+
+/* TANTO PARA EL MARGIN PADDING Y BORDER =
+PODERMOS ESPECIFICAR O SUS CUATRO LADOS, O LLAMAR POR CADA PROPIEDAD SUS LADOS TAMBIEN*/
+/* MARGIN 
+TOP/RIGHT/BOTTOM/LEFT
+                1 valor= todos sus lados iguales
+                2 valores= primero Top/Bottom
+                3 valores= primero llama al Top y Bottom y por ultimo a Left y Right
+                Top y Bottom diferenter / Left y Right iguales
+                4 valores= especifico para cada lado*/
+
+/* PADDING ES EL RELLENO INTERNO*/
+
+#banner1 {
+        width: 100%;
+        height: auto;
+        background-color: olive;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        gap: 50px;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+
+#boxProductosqueutilizamos{
+    width:100%; /*ANCHO DEL ELEMENTO*/ 
+    height: 110px; /*ALTO DEL ELEMENTO*/ 
+    /*vh= 100% DISPONIBLE DE ALTO DE LA VISTA EN PANTALLA */
+    /*wh= 100% DISPONIBLE PERO DEL ANCHO DE LA VISTA EN PANTALLA*/
+    background-color: lightblue;
+    display: flex; /*un articulo al lado del otro*/
+    justify-content: center;/*centrar*/
+    gap: 50px; /*espacio entre las cajas*/
+    align-items: center; /*ajusto el alto de la caja*/
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.productosQueUtilizamosBox {
+    width: 200px;
+    height: 60px;
+    background-color: rgb(97, 153, 97);
+    overflow: auto;/*PROPIEDAD QUE AJUSTA EL CONTENIDO*/
+    padding: 5px;
+    border: 2px solid olive;
+    display: flex;
+}
+
+.productosQueUtilizamosBox img{
+    width: 100%;
+}
+
+
+
+.boxNuestrosclientes {
+    width:100%;
+    height:100vh;
+    background-color: greenyellow;
+    position: relative;
+}
+
+.boxNuestrosclientes p {
+    position: absolute;
+    text-align: center;
+    margin: 100px;
+    background-color: lightgreen;
+    border-radius: 10px;
+}
+
+/*///////////////
+ESTILOS DEL FOOTER
+////////////*/
+
+/*LOS ATRIBUTOS LOS LLAMAMOS DE LA SIGUIENTE MANERA=
+ID= #
+CLASS= .
+ETIQUETAS/SELECTOR= POR SU NOMBRE*/
+
+#footer{
+    margin-top: auto;
+    width: 100%; /*ANCHO, el 100% del ancho disponible en pantalla*/
+    height: 200px; /*ALTO, genera el espacio respecto al contenido alojado dentro*/
+    background-color: lightgreen; /*COLOR DE FONDO*/
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.footerLogo{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    text-align: center;
+}
+
+.footerLinks{
+    text-align: center;
+}
+
+.footerRedes {
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+    gap: 10px;
+}
+
