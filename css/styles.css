@@ -27,16 +27,14 @@ li{
     list-style: none;
 }
 
-#main {
-    min-height: 100vh;
-}
+
 
 /*ETIQUETA DE LINK*/
 a{ 
     font-style: none;
     text-decoration: none;
     font-family: 'Nunito Sans', sans-serif;
-    color: darkolivegreen;
+    color: #1F2129;
 }
 
 /*/////////////////
@@ -79,19 +77,28 @@ ESTILOS DEL NAVBAR/HEADER
 }
 
 #nav {
-    background-color:lightgreen ;
+    background-color:#88868A ;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #nav ul li {
-    display: inline-block;
+    margin-left: 20px;
+    display: inline-flex;
     margin: 20px;
     padding: auto;
+    font-size: 20px;
+}
+
+.imgNav{
+    font-size: 20px;
 }
 
 /*/////////////////
-ESTILO INDEX/MAIN
+ESTILO INDEX/MAIN/GRILLAS
 ////////////////////*/
 
 /*//////////////////////
@@ -99,29 +106,55 @@ LAS ETIQUETAS EN LINEA NO NOS PERMITEN MODIFICAR SU ESTRUCTURA
 LAS ETIQUETAS EN BLOQUE NOS PERMITEN MODIFICAR SU ESTRUCTURA 
 //////////////////////*/
 
-#main{
+#main {
     min-height: 100vh; /*ALTO MINIMO= MAIN OCUPANDO SIEMPPRE EL 100% DEL VIEWPORT/VISTA DISPONIBLE EN PANTALLA*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-
-.mainTitulo{
-    color: darkolivegreen;
-    font-size: auto;
-    margin: 20px 20px;
-    padding: auto;
-}
-
-.mainSubtitulo1{
-    color: darkolivegreen;
-    display: inline-block;
-    font-size: auto;
+#inicioGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 100%);
+    gap: 10px;
     margin: 20px;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    grid-template-areas: 
+    "inicioGrid1"
+    "inicioGrid2"
+    ;
 }
 
-.mainImagenImg{
-    width: 300px;
-    height: auto;
+.inicioGrid1{
+    grid-area: inicioGrid1;
 }
+
+.inicioGrid2{
+    grid-area: inicioGrid2;
+}
+
+
+.inicioGridTexto{
+    display: grid;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #1F2129;
+}
+
+.inicioGridImg{
+    width: 100%;
+    height: 100px;
+}
+
 
 /*/////////////// 
 APRENDEMOS MODELO DE CAJA
@@ -185,7 +218,7 @@ TOP/RIGHT/BOTTOM/LEFT
 .boxNuestrosclientes {
     width:100%;
     height:100vh;
-    background-color: greenyellow;
+    background-color: #F5F2FF;
     position: relative;
 }
 
@@ -196,6 +229,124 @@ TOP/RIGHT/BOTTOM/LEFT
     background-color: lightgreen;
     border-radius: 10px;
 }
+
+/*///////////////
+ESTILOS DE PAGE SERVICIOS/GRILLAS
+////////////*/
+
+#main h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#serviciosGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 200px);
+    gap: 20px;
+    margin: 20px;
+    grid-template-areas: 
+    "serviciosGrid1 serviciosGrid2 serviciosGrid3 serviciosGrid4" /*FILA1*/
+    "serviciosGrid5 serviciosGrid6 serviciosGrid7 serviciosGrid8" /*FILA2*/
+    ;
+}
+
+
+.serviciosGrid1{
+    grid-area: serviciosGrid1;
+}
+
+.serviciosGrid2{
+    grid-area: serviciosGrid2;
+}
+
+.serviciosGrid3{
+    grid-area: serviciosGrid3;
+}
+
+.serviciosGrid4{
+    grid-area: serviciosGrid4;
+}
+
+.serviciosGrid5{
+    grid-area: serviciosGrid5;
+}
+
+.serviciosGrid6{
+    grid-area: serviciosGrid6;
+}
+
+.serviciosGrid7{
+    grid-area: serviciosGrid7;
+}
+
+.serviciosGrid8{
+    grid-area: serviciosGrid8;
+}
+
+
+
+.boxGrid img{
+    width: 100%;
+    height: 100%;
+}
+
+.boxGridTexto{
+    display: grid;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+
+/*///////////////
+ESTILOS DE PAGE NOSOTROS/GRILLAS
+////////////*/
+
+#nosotrosBanner{
+    display: flex; /*un articulo al lado del otro*/
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: rgba(128, 128, 128, 0.267);
+}
+
+#nosotrosGrid{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    grid-template-areas: 
+    "nosotrosGridTexto1 nosotrosGridTexto2"
+    "nosotrosGridImg nosotrosGridTexto3";
+    margin: 20px;
+
+}
+
+.boxNosotrosGrid img{
+    width: 100%;
+    height: 100%;
+}
+
+.nosotrosGridTexto1{
+    grid-area: nosotrosGridTexto1;
+}
+
+.nosotrosGridTexto2{
+    grid-area: nosotrosGridTexto2;
+}
+
+.nosotrosGridImg{
+    grid-area: nosotrosGridImg;
+}
+
+.nosotrosGridTexto3{
+    grid-area: nosotrosGridTexto3;
+}
+
+
 
 /*///////////////
 ESTILOS DEL FOOTER
@@ -209,30 +360,92 @@ ETIQUETAS/SELECTOR= POR SU NOMBRE*/
 #footer{
     margin-top: auto;
     width: 100%; /*ANCHO, el 100% del ancho disponible en pantalla*/
-    height: 200px; /*ALTO, genera el espacio respecto al contenido alojado dentro*/
-    background-color: lightgreen; /*COLOR DE FONDO*/
+    height: 150px; /*ALTO, genera el espacio respecto al contenido alojado dentro*/
+    background-color:#81964D; /*COLOR DE FONDO*/
     font-family: 'Nunito Sans', sans-serif;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-
+    align-items: center;
+    padding: 0 20px;
 }
 
 .footerLogo{
-    width: 150px;
-    height: 150px;
-    display: flex;
-    text-align: center;
+    width: 50px;
+    height: 10%;
+    font-size: 25px;
 }
+
 
 .footerLinks{
     text-align: center;
 }
 
-.footerRedes {
+.footerRedes{
     display: flex;
-    align-items: center;
-    border-radius: 100%;
     gap: 10px;
+    border-radius: 100%;
 }
 
+.footerRedes i{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    height: 50px;
+    width: 100%;
+}
+
+/*/////////////////////////////
+BREACKPOINTS
+////////////////////////////*/
+
+@media(max-width: 600px) {
+    #serviciosGrid{
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(8, 200px);
+        grid-template-areas: 
+        "serviciosGrid1"
+        "serviciosGrid2"
+        "serviciosGrid3"
+        "serviciosGrid4"
+        "serviciosGrid5"
+        "serviciosGrid6"
+        "serviciosGrid7"
+        "serviciosGrid8"
+        ;
+    }
+
+    #nosotrosGrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 300px);
+        grid-template-areas: 
+        "nosotrosGridTexto1"
+        "nosotrosGridTexto2"
+        "nosotrosGridImg"
+        "nosotrosGridTexto3"
+        ;
+    }
+
+    #footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #header{
+        height: auto;
+    }
+
+    #nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #nav ul li {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (orientation:landscape) {
+
+}
