@@ -31,10 +31,12 @@ li{
 
 /*ETIQUETA DE LINK*/
 a{ 
+    display: inline-block;
     font-style: none;
     text-decoration: none;
     font-family: 'Nunito Sans', sans-serif;
     color: #1F2129;
+    transition: 1s;
 }
 
 /*/////////////////
@@ -44,25 +46,6 @@ ESTILO BODY
 #body{
     max-width: 1440px;
     margin: o auto; /*CENTRADO DE CONTENIDO HORIZONTALMENTE*/
-}
-
-/*ORDEN DE PADRE A HIJO*/
-section article h1{
-    color: forestgreen;
-    font-size: 40px;
-    font-family: 'Raleway', sans-serif;
-}
-
-section article h2{
-    color:lightgreen;
-    font-size: 30px;
-    font-family: 'Raleway', sans-serif;
-}
-
-section article h3{
-    color:lightgreen;
-    font-size: 25px;
-    font-family: 'Raleway', sans-serif;
 }
 
 /*///////////////
@@ -92,6 +75,13 @@ ESTILOS DEL NAVBAR/HEADER
     padding: auto;
     font-size: 20px;
 }
+
+#nav ul li a:hover {
+    color: white;
+    font-size: 25px;
+    transition: 1s;
+}
+
 
 .imgNav{
     font-size: 20px;
@@ -128,10 +118,12 @@ LAS ETIQUETAS EN BLOQUE NOS PERMITEN MODIFICAR SU ESTRUCTURA
 
 .inicioGrid1{
     grid-area: inicioGrid1;
+    letter-spacing: 10px;
 }
 
 .inicioGrid2{
     grid-area: inicioGrid2;
+    letter-spacing: 1px;
 }
 
 .inicioGrid2{
@@ -192,6 +184,12 @@ TOP/RIGHT/BOTTOM/LEFT
     flex-wrap: wrap;
     padding: 10px;
     margin: 10px;
+    transition: 1s;
+}
+
+.productosQueUtilizamosBox:active{
+    box-shadow: 3px 5px 5px #1F2129;
+    transition: 1s;
 }
 
 .productosQueUtilizamosBox {
@@ -263,6 +261,7 @@ ESTILOS DE PAGE SERVICIOS/GRILLAS
 #main h1{
     text-align: center;
     margin-top: 20px;
+    letter-spacing: 3px;
 }
 
 #serviciosGrid{
@@ -311,11 +310,15 @@ ESTILOS DE PAGE SERVICIOS/GRILLAS
     grid-area: serviciosGrid8;
 }
 
-
-
 .boxGrid img{
     width: 100%;
     height: 100%;
+    transition: 1s;
+}
+
+.boxGrid img:active {
+    box-shadow: 5px 8px 8px #1F2129;
+    transition: 1s;
 }
 
 .boxGridTexto{
@@ -324,8 +327,15 @@ ESTILOS DE PAGE SERVICIOS/GRILLAS
     width: 100%;
     height: 100%;
     text-align: center;
+    letter-spacing: 2px;
+    font-size: 15px;
+    transition: 1s;
 }
 
+.boxGridTexto:hover {
+    color: #81964D;
+    transition: 1s;
+}
 
 
 /*///////////////
@@ -398,8 +408,9 @@ ETIQUETAS/SELECTOR= POR SU NOMBRE*/
 
 .footerLogo{
     width: 50px;
-    height: 10%;
+    margin: 10px;
     font-size: 25px;
+    overflow: auto;
 }
 
 
