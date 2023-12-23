@@ -119,6 +119,11 @@ LAS ETIQUETAS EN BLOQUE NOS PERMITEN MODIFICAR SU ESTRUCTURA
 .inicioGrid1{
     grid-area: inicioGrid1;
     letter-spacing: 10px;
+    transition: 1s;
+}
+
+.inicioGrid1:nth-child(1) p:hover {
+    color:#81964D
 }
 
 .inicioGrid2{
@@ -267,13 +272,14 @@ ESTILOS DE PAGE SERVICIOS/GRILLAS
 #serviciosGrid{
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: repeat(2, 200px);
+    grid-template-rows: 200px 100px 200px;
     gap: 20px;
     height: 100vh;
     margin: 20px;
     grid-template-areas: 
     "serviciosGrid1 serviciosGrid2 serviciosGrid3 serviciosGrid4" /*FILA1*/
-    "serviciosGrid5 serviciosGrid6 serviciosGrid7 serviciosGrid8" /*FILA2*/
+    "serviciosGrid5 serviciosGrid7 serviciosGrid9 serviciosGrid11" /*FILA2*/
+    "serviciosGrid6 serviciosGrid8 serviciosGrid10 serviciosGrid12" /*FILA3*/
     ;
 }
 
@@ -310,6 +316,22 @@ ESTILOS DE PAGE SERVICIOS/GRILLAS
     grid-area: serviciosGrid8;
 }
 
+.serviciosGrid9{
+    grid-area: serviciosGrid9;
+}
+
+.serviciosGrid10{
+    grid-area: serviciosGrid10;
+}
+
+.serviciosGrid11{
+    grid-area: serviciosGrid11;
+}
+
+.serviciosGrid12{
+    grid-area: serviciosGrid12;
+}
+
 .boxGrid img{
     width: 100%;
     height: 100%;
@@ -328,15 +350,32 @@ ESTILOS DE PAGE SERVICIOS/GRILLAS
     height: 100%;
     text-align: center;
     letter-spacing: 2px;
+    font-size: 20px;
+    align-items: center;
+    transition: 1s;
+    background-color: #81964D;
+}
+
+.boxGridTexto:hover {
+    color: #F5F2FF;
+    transition: 1s;
+}
+
+.boxGridTexto2{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    letter-spacing: 2px;
     font-size: 15px;
     transition: 1s;
 }
 
-.boxGridTexto:hover {
+.boxGridTexto2:hover{
     color: #81964D;
     transition: 1s;
 }
-
 
 /*///////////////
 ESTILOS DE PAGE NOSOTROS/GRILLAS
@@ -413,15 +452,19 @@ ETIQUETAS/SELECTOR= POR SU NOMBRE*/
     overflow: auto;
 }
 
-
 .footerLinks{
     text-align: center;
+    letter-spacing: 2px;
+    gap: 2px;
+    font-size: 20px;
+    transition: 1s;
 }
 
 .footerRedes{
     display: flex;
     gap: 10px;
     border-radius: 100%;
+    transition: 1s;
 }
 
 .footerRedes i{
@@ -430,6 +473,13 @@ ETIQUETAS/SELECTOR= POR SU NOMBRE*/
     font-size: 25px;
     height: 50px;
     width: 100%;
+}
+
+
+.footerRedes:hover {
+    color: white;
+    font-size: 20px;
+    transition: 1s;
 }
 
 /*/////////////////////////////
