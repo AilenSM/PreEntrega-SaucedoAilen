@@ -176,7 +176,7 @@ TOP/RIGHT/BOTTOM/LEFT
     }
 
 
-#boxProductosqueutilizamos{
+#productosQueUtilizamos{
     width:100%; /*ANCHO DEL ELEMENTO*/ 
     height: 100%; /*ALTO DEL ELEMENTO*/ 
     /*vh= 100% DISPONIBLE DE ALTO DE LA VISTA EN PANTALLA */
@@ -192,12 +192,12 @@ TOP/RIGHT/BOTTOM/LEFT
     transition: 1s;
 }
 
-.productosQueUtilizamosBox:active{
+.productosQueUtilizamos__box:active{
     box-shadow: 3px 5px 5px #1F2129;
     transition: 1s;
 }
 
-.productosQueUtilizamosBox {
+.productosQueUtilizamos__box {
     width: 200px;
     height: 60px;
     overflow: auto;/*PROPIEDAD QUE AJUSTA EL CONTENIDO*/
@@ -205,11 +205,9 @@ TOP/RIGHT/BOTTOM/LEFT
     display: flex;
 }
 
-.productosQueUtilizamosBox img{
+.productosQueUtilizamos__box img{
     width: 100%;
 }
-
-.boxProductosQueUtilizamos__box
 
 #gridNuestrosclientes{
     display: grid;
