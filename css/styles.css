@@ -209,6 +209,8 @@ TOP/RIGHT/BOTTOM/LEFT
     width: 100%;
 }
 
+.boxProductosQueUtilizamos__box
+
 #gridNuestrosclientes{
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
