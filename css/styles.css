@@ -93,7 +93,7 @@ LAS ETIQUETAS EN LINEA NO NOS PERMITEN MODIFICAR SU ESTRUCTURA
 LAS ETIQUETAS EN BLOQUE NOS PERMITEN MODIFICAR SU ESTRUCTURA 
 //////////////////////*/
 
-#main {
+#main{
     min-height: 100vh; /*ALTO MINIMO= MAIN OCUPANDO SIEMPPRE EL 100% DEL VIEWPORT/VISTA DISPONIBLE EN PANTALLA*/
     width: 100%;
     display: flex;
@@ -103,44 +103,57 @@ LAS ETIQUETAS EN BLOQUE NOS PERMITEN MODIFICAR SU ESTRUCTURA
     flex-wrap: wrap;
 }
 
-#inicioGrid{
+#pageInicio__grid{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100fr;
     gap: 10px;
     margin: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-    "inicioGrid1" "inicioGrid2";
+    "inicioGrid1" 
+    "inicioGrid2"
+    ;
 }
 
-.inicioGrid1{
+.pageInicio__grid1{
     grid-area: inicioGrid1;
+}
+
+.pageInicio__grid2{
+    grid-area: inicioGrid2;
+}
+
+.pageInicio-grid1__p{
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 6px;
+    transition: 1s;
+}
+
+.pageInicio-grid1__p:hover {
+    color:#81964D;
     letter-spacing: 10px;
     transition: 1s;
 }
 
-.inicioGrid1:nth-child(1) p:hover {
-    color:#81964D
-}
-
-.inicioGrid2{
-    grid-area: inicioGrid2;
-    letter-spacing: 1px;
-}
-
-.inicioGrid2{
-    grid-row: 2/3;
-}
-
-.inicioGridTexto{
-    display: grid;
+.pageInicio-grid2__p{
     margin: 20px;
     width: 100%;
     height: 100%;
     text-align: center;
     align-items: center;
     font-size: 30px;
-    color: #1F2129;
+    letter-spacing: 2px;
+    transition: 1s;
+}
+
+.pageInicio-grid2__p:hover{
+    color:#81964D;
+    letter-spacing: 3px;
+    transition: 1s;
 }
 
 /*/////////////// 
